@@ -11,20 +11,20 @@ module load modules
 module load craype
 module load PrgEnv-intel
 # module swap PrgEnv-cray PrgEnv-intel
-module load cudatoolkit/9.2.148_3.19-6.0.7.1_2.1__g3d9acc8
+module load cudatoolkit
 module load daint-gpu
 module load EasyBuild-custom/cscs
 module load cray-hdf5-parallel
-module load CMake/3.12.4
-module load PyExtensions/2.7.15.1-CrayGNU-18.08
-module load Boost/1.67.0-CrayGNU-18.08
+module load CMake/3.14.5
+module load PyExtensions/2.7.15.1-CrayGNU-20.08
+module load Boost/1.70.0-CrayGNU-20.08
 # install libxml2 for CrayIntel
-eb libxml2-2.9.7-CrayIntel-18.08 -r
-module load libxml2/2.9.7-CrayIntel-18.08
+eb libxml2-2.9.7-CrayIntel-20.08 -r
+module load libxml2/2.9.7-CrayIntel-20.08
 module unload cray-libsci
 module unload cray-libsci_acc
 # make sure there is a recent gcc compiler in the path
-module load gcc/6.2.0
+module load gcc/8.3.0
 
 # check what is loaded
 module list
