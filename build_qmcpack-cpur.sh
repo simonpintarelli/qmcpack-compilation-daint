@@ -41,7 +41,7 @@ bdir=/scratch/snx3000/simonpi/qmcpack-cpur
     mkdir -p ${bdir}
     cd ${bdir}
     export CRAY_LINK_TYPE=dynamic
-    cmake  -DQMC_CUDA=Off \
+    CXX=CC cmake  -DQMC_CUDA=Off \
            -DQMC_MPI=On \
            -DQMC_OMP=On \
            -DQMC_COMPLEX=1 \

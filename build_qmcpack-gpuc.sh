@@ -41,7 +41,7 @@ bdir=/scratch/snx3000/simonpi/qmcpack-gpuc
     mkdir -p ${bdir}
     cd ${bdir}
     export CRAY_LINK_TYPE=dynamic
-    cmake  -DQMC_CUDA=On \
+    CXX=CC cmake  -DQMC_CUDA=On \
            -DQMC_MPI=On \
            -DQMC_OMP=On \
            -DQMC_COMPLEX=1 \
