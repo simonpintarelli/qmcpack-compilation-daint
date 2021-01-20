@@ -5,14 +5,10 @@ export QMC_SOURCE_DIR=${HOME}/qmcpack-3.10.0
 
 mkdir -p ${INSTALL_PREIFX}
 # load modules
-module purge
-# export EASYBUILD_PREFIX=/users/simonpi/jenkins/daint-haswell
-module load modules
-module load craype
-module load PrgEnv-intel
+module swap PrgEnv-cray PrgEnv-intel
 # module swap PrgEnv-cray PrgEnv-intel
-module load cudatoolkit
 module load daint-gpu
+module load cudatoolkit
 module load EasyBuild-custom/cscs
 module load cray-hdf5-parallel
 module load CMake/3.14.5
