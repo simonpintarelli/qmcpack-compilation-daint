@@ -46,6 +46,7 @@ bdir=/scratch/snx3000/simonpi/qmcpack-cpur
            -DQMC_OMP=On \
            -DQMC_COMPLEX=1 \
            -DENABLE_PHDF5=On \
+           -DCMAKE_SYSTEM_NAME=CrayLinuxEnvironment \
            -DCMAKE_INSTALL_PREFIX=${INSTALL_PREFIX} \
            ${QMC_SOURCE_DIR}
     make -j8

@@ -47,6 +47,7 @@ bdir=/scratch/snx3000/simonpi/qmcpack-gpuc
            -DQMC_COMPLEX=1 \
            -DCUDA_ARCH=sm_60 \
            -DENABLE_PHDF5=On \
+           -DCMAKE_SYSTEM_NAME=CrayLinuxEnvironment \
            -DCMAKE_INSTALL_PREFIX=${INSTALL_PREFIX} \
            -DCUDA_PROPAGATE_HOST_FLAGS=Off \
            -DCUDA_HOST_COMPILER=`which gcc` \
