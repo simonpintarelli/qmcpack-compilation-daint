@@ -19,7 +19,7 @@ module load CMake/3.14.5
 module load PyExtensions/python3-CrayGNU-20.08
 module load Boost/1.70.0-CrayGNU-20.08
 # install libxml2 for CrayIntel
-eb libxml2-2.9.7-CrayIntel-20.08 -r
+eb libxml2-2.9.7-CrayIntel-20.08.eb -r
 module load libxml2/2.9.7-CrayIntel-20.08
 module unload cray-libsci
 module unload cray-libsci_acc
