@@ -9,7 +9,7 @@ description = """Libxml2 is the XML C parser and
 toolchain developed for the Gnome project
  (but usable outside of the Gnome platform)."""
 
-toolchain = {'name': 'CrayIntel', 'version': '20.08'}
+toolchain = {'name': 'CrayIntel', 'version': '20.11'}
 toolchainopts = {'pic': True}
 
 source_urls = [
