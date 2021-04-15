@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export INSTALL_PREIFX=/apps/daint/SSL/simonpi/qmcpack-cpuc
-export QMC_SOURCE_DIR=${HOME}/qmcpack-3.10.0
+export QMC_SOURCE_DIR=${HOME}/qmcpack-3.11.0
 
 mkdir -p ${INSTALL_PREIFX}
 # load modules
