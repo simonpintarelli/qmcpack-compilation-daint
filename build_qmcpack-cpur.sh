@@ -14,19 +14,14 @@ module load cray-hdf5-parallel
 module load CMake/3.14.5
 module load PyExtensions/python3-CrayGNU-20.11
 module load Boost/1.75.0-CrayGNU-20.11
-# install libxml2 for CrayIntel
-eb libxml2-2.9.7-CrayIntel-20.11.eb -r
-module load libxml2/2.9.7-CrayIntel-20.11
+# install libxml2 for CrayGNU
+eb libxml2-2.9.7-CrayGNU-20.11.eb -r
+module load libxml2/2.9.7-CrayGNU-20.11
 module unload cray-libsci
 module unload cray-libsci_acc
-# make sure there is a recent gcc compiler in the path
-module load gcc/8.3.0
 
 # check what is loaded
 module list
-
-# CUDA 9.2 refuses to work with icc 18 set gcc as host compiler, need to avoid
-# passing host flags to cuda (they are for the intel compiler)
 
 bdir=/scratch/snx3000/simonpi/qmcpack-cpur
 # build in /dev/shm
