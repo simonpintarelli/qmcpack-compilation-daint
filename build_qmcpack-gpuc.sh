@@ -14,7 +14,7 @@ module load cray-hdf5-parallel
 module load CMake/3.14.5
 module load PyExtensions/python3-CrayGNU-20.11
 module load Boost/1.75.0-CrayGNU-20.11
-# install libxml2 for CrayIntel
+# install libxml2 for CrayGNU
 eb libxml2-2.9.7-CrayGNU-20.11.eb -r
 module load libxml2/2.9.7-CrayGNU-20.11
 # module unload cray-libsci
