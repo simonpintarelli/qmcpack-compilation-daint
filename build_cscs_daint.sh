@@ -2,7 +2,9 @@
 
 export QMC_SOURCE_DIR=${HOME}/qmcpack-3.11.0
 export QMC_BUILD_DIR=/scratch/snx3000/azen/BUILD_qmcpack-3.11.0
-BUILD_MODULES=load_cscs_daint_modules.sh
+mkdir $QMC_BUILD_DIR
+
+BUILD_MODULES=${HOME}/load_cscs_daint_modules.sh
 
 # module purge
 echo "Purging current module set"
@@ -25,6 +27,7 @@ for build in "${!builds[@]}"
 do
     echo "building: $build with ${builds[$build]}"
     export QMC_INSTALL_DIR=${QMC_SOURCE_DIR}/bin_${build}
+    mkdir ${QMC_INSTALL_DIR}
 #    rm bin/qmcpack_${build}
     rm -rf ${QMC_BUILD_DIR}/${build}
     mkdir ${QMC_BUILD_DIR}/${build}
@@ -37,7 +40,6 @@ do
            ${builds[$build]} \
            -DCMAKE_INSTALL_PREFIX=${QMC_INSTALL_DIR} \
            ${QMC_SOURCE_DIR}
-          ..
     make -j 20
     make install
 #    if [ $? -eq 0 ]; then
