@@ -40,6 +40,7 @@ module list
        -DENABLE_CUDA=On \
            -DQMC_MPI=On \
            -DQMC_OMP=On \
+           -DCUDA_ARCH=sm_60 \
            -DQMC_COMPLEX=1 \
            -DENABLE_PHDF5=On \
            ${QMC_SOURCE_DIR}
