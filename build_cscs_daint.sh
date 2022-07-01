@@ -1,7 +1,7 @@
 #!/bin/bash
 
-export QMC_SOURCE_DIR=${HOME}/qmcpack-3.11.0
-export QMC_BUILD_DIR=/scratch/snx3000/azen/BUILD_qmcpack-3.11.0
+export QMC_SOURCE_DIR=${HOME}/qmcpack-3.14.0
+export QMC_BUILD_DIR=/scratch/snx3000/azen/BUILD_qmcpack-3.14.0
 mkdir $QMC_BUILD_DIR
 
 BUILD_MODULES=${HOME}/load_cscs_daint_modules.sh

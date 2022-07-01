@@ -2,14 +2,14 @@
 easyblock = 'ConfigureMake'
 
 name = 'libxml2'
-version = "2.9.7"
+version = "2.9.10"
 
 homepage = 'http://xmlsoft.org/'
 description = """Libxml2 is the XML C parser and
 toolchain developed for the Gnome project
  (but usable outside of the Gnome platform)."""
 
-toolchain = {'name': 'CrayGNU', 'version': '20.11'}
+toolchain = {'name': 'CrayGNU', 'version': '21.09'}
 toolchainopts = {'pic': True}
 
 source_urls = [

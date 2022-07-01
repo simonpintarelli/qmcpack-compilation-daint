@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export mode=cpuc
-export QMC_SOURCE_DIR=${HOME}/qmcpack-3.11.0
+export QMC_SOURCE_DIR=${HOME}/qmcpack-3.14.0
 bdir=${QMC_SOURCE_DIR}/build_$mode
 
 
@@ -11,12 +11,12 @@ module swap PrgEnv-cray PrgEnv-gnu
 module load daint-gpu
 module load EasyBuild-custom/cscs
 module load cray-hdf5-parallel
-module load CMake/3.14.5
-module load PyExtensions/python3-CrayGNU-20.11
-module load Boost/1.75.0-CrayGNU-20.11
+module load CMake
+module load PyExtensions/python3-CrayGNU-21.09
+module load Boost/1.78.0-CrayGNU-21.09
 # install libxml2 for CrayGNU
-eb libxml2-2.9.7-CrayGNU-20.11.eb -r
-module load libxml2/2.9.7-CrayGNU-20.11
+eb libxml2-2.9.10-CrayGNU-21.09.eb -r
+module load libxml2/2.9.10-CrayGNU-21.09
 module load cudatoolkit
 module load cray-fftw
 module load intel
